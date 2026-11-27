@@ -1,0 +1,220 @@
+/* Deal Beacon — Black Friday 2026. Deep navy + signal amber on warm paper. */
+:root {
+  --navy: #10233d;
+  --navy-soft: #1b3557;
+  --amber: #f2a007;
+  --amber-dark: #b97a00;
+  --paper: #faf6ee;
+  --card: #ffffff;
+  --ink: #1c2733;
+  --muted: #5b6b7d;
+  --line: #e3dac8;
+  --green: #1d7a4c;
+  --green-bg: #e2f3e8;
+  --teal: #0f766e;
+  --teal-bg: #dff2ef;
+  --grey-bg: #eef0f2;
+  --radius: 14px;
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: "Avenir Next", "Segoe UI", system-ui, -apple-system, sans-serif;
+  line-height: 1.45;
+}
+.masthead {
+  background: linear-gradient(135deg, var(--navy) 0%, var(--navy-soft) 70%, #274b7a 100%);
+  color: #fff;
+  padding: 34px 20px 30px;
+}
+.masthead-inner { max-width: 1080px; margin: 0 auto; }
+.kicker {
+  margin: 0 0 6px;
+  color: var(--amber);
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+}
+.masthead h1 { margin: 0; font-size: 44px; letter-spacing: -0.02em; }
+.tagline { margin: 8px 0 0; max-width: 640px; color: #d7e2ef; font-size: 17px; }
+.stats {
+  max-width: 1080px;
+  margin: -14px auto 0;
+  padding: 0 20px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+}
+.stat {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 14px 16px;
+  box-shadow: 0 2px 8px rgba(16, 35, 61, .07);
+}
+.stat b { display: block; font-size: 26px; color: var(--navy); }
+.stat span { font-size: 13px; color: var(--muted); }
+.controls {
+  max-width: 1080px;
+  margin: 18px auto 0;
+  padding: 0 20px;
+}
+.control-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  align-items: end;
+}
+.search-box { flex: 1 1 260px; }
+.search-box input {
+  width: 100%;
+  padding: 12px 14px;
+  font-size: 16px;
+  border: 2px solid var(--navy);
+  border-radius: 10px;
+  background: #fff;
+}
+.select-wrap {
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: .06em;
+}
+.select-wrap select {
+  display: block;
+  margin-top: 4px;
+  padding: 10px 8px;
+  font-size: 15px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: #fff;
+  max-width: 190px;
+}
+.chips { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 14px; }
+.chip {
+  border: 1px solid var(--navy);
+  background: #fff;
+  color: var(--navy);
+  border-radius: 999px;
+  padding: 7px 14px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+}
+.chip[aria-pressed="true"] { background: var(--navy); color: #fff; }
+.result-line { color: var(--muted); font-size: 14px; margin: 12px 0 0; }
+main { max-width: 1080px; margin: 0 auto; padding: 18px 20px 8px; }
+.deal-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+.deal {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 2px 8px rgba(16, 35, 61, .05);
+}
+.deal-top { display: flex; justify-content: space-between; gap: 8px; align-items: start; }
+.deal-cat { font-size: 12px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; color: var(--amber-dark); }
+.badge {
+  flex: none;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: .05em;
+  text-transform: uppercase;
+  border-radius: 999px;
+  padding: 4px 9px;
+  white-space: nowrap;
+}
+.badge-new-low { background: var(--green-bg); color: var(--green); }
+.badge-strong { background: var(--teal-bg); color: var(--teal); }
+.badge-routine { background: var(--grey-bg); color: var(--muted); }
+.deal h2 { margin: 8px 0 2px; font-size: 18px; line-height: 1.3; }
+.deal-store { margin: 0 0 10px; color: var(--muted); font-size: 14px; }
+.price-row { display: flex; align-items: baseline; gap: 10px; margin-top: auto; }
+.price { font-size: 28px; font-weight: 800; color: var(--navy); }
+.was { color: var(--muted); text-decoration: line-through; font-size: 15px; }
+.off {
+  margin-left: auto;
+  background: var(--amber);
+  color: #241a00;
+  font-weight: 800;
+  border-radius: 8px;
+  padding: 4px 8px;
+  font-size: 14px;
+}
+.save-line { margin: 4px 0 0; font-size: 13px; color: var(--green); font-weight: 700; }
+.evidence-toggle {
+  margin-top: 12px;
+  background: none;
+  border: none;
+  padding: 0;
+  color: var(--navy);
+  font: inherit;
+  font-size: 14px;
+  font-weight: 700;
+  text-align: left;
+  cursor: pointer;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+.evidence { margin: 8px 0 0; font-size: 13.5px; color: var(--muted); }
+.evidence p { margin: 0 0 6px; }
+.evidence .src { font-size: 12.5px; }
+.store-link {
+  display: block;
+  margin-top: 12px;
+  text-align: center;
+  background: var(--navy);
+  color: #fff;
+  font-weight: 700;
+  text-decoration: none;
+  border-radius: 10px;
+  padding: 11px 10px;
+}
+.store-link:hover { background: var(--navy-soft); }
+.checked { margin: 10px 0 0; font-size: 12px; color: var(--muted); }
+.empty { text-align: center; color: var(--muted); padding: 40px 10px; font-size: 16px; }
+.method {
+  max-width: 1080px;
+  margin: 10px auto 0;
+  padding: 0 20px 10px;
+}
+.method h2 { font-size: 22px; color: var(--navy); margin-bottom: 6px; }
+.method h3 { font-size: 16px; margin: 18px 0 6px; }
+.method ul { padding-left: 20px; }
+.method li { margin-bottom: 8px; }
+.fineprint { font-size: 13px; color: var(--muted); }
+.page-footer {
+  border-top: 1px solid var(--line);
+  margin-top: 24px;
+  padding: 18px 20px 30px;
+  text-align: center;
+  color: var(--muted);
+  font-size: 13px;
+}
+.visually-hidden {
+  position: absolute; width: 1px; height: 1px;
+  overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap;
+}
+@media (max-width: 900px) {
+  .deal-grid { grid-template-columns: repeat(2, 1fr); }
+  .stats { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 560px) {
+  .masthead h1 { font-size: 34px; }
+  .deal-grid { grid-template-columns: 1fr; }
+  .control-row { flex-direction: column; align-items: stretch; }
+  /* In a column flex layout flex-basis becomes height: the search box must
+     not keep its 260px row-basis, or it leaves a tall empty gap. */
+  .search-box { flex: none; }
+  .select-wrap select { max-width: none; width: 100%; }
+}

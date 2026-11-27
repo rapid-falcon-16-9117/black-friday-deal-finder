@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Deal Beacon — Black Friday 2026 deal finder</title>
+<meta name="description" content="34 real Black Friday and Cyber Monday 2026 deals, checked 27 November 2026, with prices, stores, discounts and an honest verdict on each one.">
+<link rel="icon" href="data:,">
+<link rel="stylesheet" href="style.css">
+<script type="module" src="app.js"></script>
+</head>
+<body>
+<header class="masthead">
+  <div class="masthead-inner">
+    <p class="kicker">Black Friday &amp; Cyber Monday 2026 &middot; checked Fri 27 Nov 2026</p>
+    <h1>Deal Beacon</h1>
+    <p class="tagline">Real deals, checked by hand today — with the price, the usual price, and an honest answer to “is it actually a deal?”</p>
+  </div>
+</header>
+
+<section class="stats" id="stats" aria-label="Sale summary"></section>
+
+<section class="controls" aria-label="Search and filter deals">
+  <div class="control-row">
+    <label class="search-box">
+      <span class="visually-hidden">Search deals</span>
+      <input id="search" type="search" placeholder="Search a product, brand or store…" autocomplete="off">
+    </label>
+    <label class="select-wrap">Sort
+      <select id="sort">
+        <option value="saving">Biggest saving first</option>
+        <option value="discount">Biggest % off first</option>
+        <option value="price-asc">Lowest price first</option>
+        <option value="price-desc">Highest price first</option>
+        <option value="name">Name A–Z</option>
+      </select>
+    </label>
+    <label class="select-wrap">Store
+      <select id="store"><option value="">All stores</option></select>
+    </label>
+    <label class="select-wrap">Min. discount
+      <select id="minDiscount">
+        <option value="0">Any discount</option>
+        <option value="20">20% off or more</option>
+        <option value="30">30% off or more</option>
+        <option value="40">40% off or more</option>
+        <option value="50">50% off or more</option>
+      </select>
+    </label>
+    <label class="select-wrap">Verdict
+      <select id="verdict">
+        <option value="">Any verdict</option>
+        <option value="new-low">New low only</option>
+        <option value="strong">Strong price only</option>
+        <option value="routine">Routine sale only</option>
+      </select>
+    </label>
+  </div>
+  <div class="chips" id="categoryChips" role="group" aria-label="Filter by category"></div>
+  <p class="result-line" id="resultLine" aria-live="polite"></p>
+</section>
+
+<main>
+  <div class="deal-grid" id="dealGrid"></div>
+  <p class="empty" id="emptyState" hidden>No deals match those filters. Try clearing the search or lowering the minimum discount.</p>
+</main>
+
+<section class="method">
+  <h2>How these deals were checked</h2>
+  <p>Every price on this page was read on <strong>Friday 27 November 2026</strong> from a deals source that names the store — a retailer announcement, a live deals roundup, or the store’s own Black Friday listing. Each card shows where its price was read and when. Nothing here is invented, and nothing is a stale price from an earlier sale.</p>
+  <h3>What the verdicts mean</h3>
+  <ul>
+    <li><span class="badge badge-new-low">New low</span> — the lowest price tracked for this product, or the first real cut since launch.</li>
+    <li><span class="badge badge-strong">Strong price</span> — a deep cut (usually 30% or more) that beats the product’s usual sale price.</li>
+    <li><span class="badge badge-routine">Routine sale</span> — a genuine discount, but one this product hits often. Worth buying only if you wanted it anyway.</li>
+  </ul>
+  <p class="fineprint">Prices change fast on Black Friday — always re-check the price at the store before you buy. Store links open the retailer’s own search or product page. Deal Beacon is an independent roundup and is not affiliated with any store named here.</p>
+</section>
+
+<footer class="page-footer">
+  <p>Deal Beacon · 34 deals · 6 stores · 11 categories · Prices checked 27 Nov 2026, 08:20 UTC · Cyber Monday ends 30 Nov 2026</p>
+</footer>
+</body>
+</html>
